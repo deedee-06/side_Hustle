@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>TASK 1- Welcome to Side hustle Internship!
+        Enjoy the ride!!!
+    </form></h1>
+    <p>Creating a simple form with the following features
+        <ol>
+            <li>Name</li>
+            <li>Email Address</li>
+            <li>Phone number</li>
+            <li>Gender</li>
+            <li>Password</li>
+            <li>Submit</li>
+            <li>Must highlight the empty block on submit</li>
+            <li>Error Message when inputting the wrong format for email</li>
+            <li>Display a success message on successful submission</li>
+        </ol>
+    </p>
+    <form name="form1" action="/action_page.php" onsubmit="return validateForm ()" method="post" required>
+    <fieldset>
+        <legend>BIO-DATA</legend>
+        <label for="fullname">Name:</label>
+        <input type="text" name="fullname" id="fullname"> <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required><br>
+        <label for="phonenumber">Mobile number:</label>
+        <input type="tel" name="phonenumber" id="phonenumber"> <br>
+        <label for="gender">Gender:</label>
+        <select id="gender">
+            <option value="pick"></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select> <br>
+        <label for="address">Home address:</label>
+        <input type="text" name="address" id="address"> <br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" id="dob"> <br>
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" id="pass">
+        <input type="button" value="Submit">
+    </form>
+    </fieldset>
+    <script type="text/javascript">
+        alert("Welcome to my sidehustle intership folder");
+        function validateForm(){
+            var x=docment.forms["form1"]
+            [email].value;
+             if (x== "") {
+                alert("Wrong Format For Email");
+                return false;
+             }
+        }
+
+        function Submit() {
+            alert("Congratulations! Form submitted!!")
+        }
+        
+    </script>
+</html>
