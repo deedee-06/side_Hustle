@@ -5,13 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 1 task</title>
-    <link rel="stylesheet" href="style.css">
+   <style>
+    body{
+        background-color: grey;
+        color: white;
+    }
+    form{
+        background-color: rgb(32, 65, 65);
+        color: brown;
+        border: none;
+        width:60%; 
+    }
+    #submit{
+        background-color: rgb(32, 65, 65);;
+        color: whitesmoke;
+        border-color: white;
+    }
+    </style>
 </head>
 <body>
     <h1>TASK 1- Welcome to Side hustle Internship!
         Enjoy the ride!!!
-    </form></h1>
-    <p>Creating a simple form with the following features
+    </h1>
+    <!-- <p>Creating a simple form with the following features
         <ol>
             <li>Name</li>
             <li>Email Address</li>
@@ -23,45 +39,39 @@
             <li>Error Message when inputting the wrong format for email</li>
             <li>Display a success message on successful submission</li>
         </ol>
-    </p>
-    <form name="form1" action="/action_page.php" onsubmit="return validateForm ()" method="post" required>
+    </p> -->
+    <form >
     <fieldset>
         <legend>BIO-DATA</legend>
         <label for="fullname">Name:</label>
-        <input type="text" name="fullname" id="fullname"> <br>
+        <input type="text" name="fullname" id="fullname" required> <br> <br>
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required><br>
+        <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+        <span role="alert" id="wrongformat" aria-hidden="true">
+        </span> <br> <br>
         <label for="phonenumber">Mobile number:</label>
-        <input type="tel" name="phonenumber" id="phonenumber"> <br>
+        <input type="tel" name="phonenumber" id="phonenumber" placeholder="+234-000-0000-000" required> <br> <br>
         <label for="gender">Gender:</label>
-        <select id="gender">
+        <select id="gender" required>
             <option value="pick"></option>
             <option value="male">Male</option>
             <option value="female">Female</option>
-        </select> <br>
+        </select> <br> <br>
         <label for="address">Home address:</label>
-        <input type="text" name="address" id="address"> <br>
+        <input type="text" name="address" id="address"required> <br> <br>
         <label for="dob">Date of Birth:</label>
-        <input type="date" name="dob" id="dob"> <br>
-        <label for="pass">Password:</label>
-        <input type="password" name="pass" id="pass">
-        <input type="button" value="Submit">
-    </form>
+        <input type="date" name="dob" id="dob" required> <br> <br>
+        <label for="pwd">Password:</label>
+        <input type="password" name="pwd" id="pwd" required> <br>
+        <button id="submit" onclick="onclickFunction()">Submit</button>
     </fieldset>
-    <script type="text/javascript">
-        alert("Welcome to my sidehustle intership folder");
-        function validateForm(){
-            var x=docment.forms["form1"]
-            [email].value;
-             if (x== "") {
-                alert("Wrong Format For Email");
-                return false;
-             }
-        }
+</form>
 
-        function Submit() {
-            alert("Congratulations! Form submitted!!")
+    <script type="text/javascript">
+        alert("Welcome! This is week 1 task for sidehustle intenship");
+
+        function onclickFunction() {
+            alert("Congratulations! Form submitted!")
         }
-        
     </script>
 </html>
